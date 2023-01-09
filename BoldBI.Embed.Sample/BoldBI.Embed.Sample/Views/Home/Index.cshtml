@@ -1,0 +1,39 @@
+﻿
+@using BoldBI.Embed.Sample.Models
+@{
+    ViewBag.Title = "Home";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script type="text/javascript" src="https://cdn.boldbi.com/embedded-sdk/v5.3.53/boldbi-embed.js"></script>
+    <script type="text/javascript" src="~/js/Index.js"></script>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script type="text/javascript">
+        var rootUrl = "@EmbedProperties.RootUrl";
+        var siteIdentifier = "@EmbedProperties.SiteIdentifier";
+        var environment = "@EmbedProperties.Environment";
+        var authorizationServerUrl = "@Url.Action("GetDetails", "Home")";
+        var getDashboardsUrl = "@Url.Action("GetDashboards", "Home")";
+    </script>
+</head>
+
+<body onload="Init()">
+    <div id="container">
+            <div class="header-section">
+                <div id="grid-title">All Dashboard</div>
+            </div>
+            <div id="panel">
+
+            </div>
+    </div>
+    <div id="viewer-section">
+        <div id="dashboard"></div>
+    </div>
+</body>
+
+</html>
