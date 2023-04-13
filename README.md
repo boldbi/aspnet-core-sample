@@ -18,11 +18,14 @@ The samples require the following requirements to run.
 
  ## Using the ASP.NET Core sample
  
- * Open the solution file `BoldBI.Embed.Sample.sln` in Visual studio. 
+ * Open the solution file `BoldBI.Embed.Sample.sln` in Visual Studio Code. 
 
- * Open the EmbedProperties.cs file in the following location, /Models/EmbedProperties.cs.
+ * Copy the downloaded embedConfig.json file, which is generated from the embed settings page of Bold BI server and paste into the App_Data folder of sample application.
 
- * Please change the following properties in the `EmbedProperties.cs` file as per your Bold BI Server.
+ * Run the application.
+ 
+ # Properties that are configured in the sample
+ The following properties are used in `embedConfig.json` file:
 
 <meta charset="utf-8"/>
 <table>
