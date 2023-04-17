@@ -1,14 +1,10 @@
-﻿using BoldBI.Embed.Sample.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System;
 using System.Net.Http;
+using Microsoft.AspNetCore.Mvc;
+using BoldBI.Embed.Sample.Models;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 using System.Security.Cryptography;
-using System.Threading.Tasks;
 
 namespace BoldBI.Embed.Sample.Controllers
 {
@@ -19,6 +15,10 @@ namespace BoldBI.Embed.Sample.Controllers
             return View();
         }
 
+        public IActionResult EmbedConfigErrorLog()
+        {
+            return View();
+        }
 
         [HttpGet]
         [Route("GetDashboards")]

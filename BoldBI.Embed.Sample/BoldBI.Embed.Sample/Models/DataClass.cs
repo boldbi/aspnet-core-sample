@@ -79,5 +79,17 @@ namespace BoldBI.Embed.Sample.Models
             get;
             set;
         }
+
+        public string EmbedType
+        {
+            get;
+            set;
+        }
+
+        public string DashboardId
+        {
+            get;
+            set;
+        }
     }
 }

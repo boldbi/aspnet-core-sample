@@ -13,13 +13,18 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-string BasePath = AppDomain.CurrentDomain.BaseDirectory;
-
-// Read the contents of embedconfig.json
-string jsonString = File.ReadAllText(BasePath + "\\app_data\\embedConfig.json");
-
-// Deserialize the JSON string into a GloblaAppSettings.
-GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
+try
+{
+    string BasePath = AppDomain.CurrentDomain.BaseDirectory;
+    string jsonString = File.ReadAllText(BasePath + "\\app_data\\embedConfig.json");
+    GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
+}
+catch (Exception)
+{
+    app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=EmbedConfigErrorLog}");
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -41,3 +46,4 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
