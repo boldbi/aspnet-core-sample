@@ -12,10 +12,10 @@ namespace BoldBI.Embed.Sample.Models
         public static string RootUrl = "http://localhost:54321/bi";
 
         //  For Bold BI Enterprise edition, it should be like `site/site1`. For Bold BI Cloud, it should be empty string.
-        public static string SiteIdentifier = "";
+        public static string SiteIdentifier = "site/site1";
 
         // Your Bold BI application environment. (If Cloud, you should use `cloud`, if Enterprise, you should use `enterprise`)
-        public static string Environment = "";
+        public static string Environment = "enterprise";
 
         // Enter your BoldBI credentials here.
         public static string UserEmail = "";
