@@ -15,6 +15,7 @@ The samples require the following requirements to run.
 
  * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
  * [.NET Core 6.0](https://dotnet.microsoft.com/download/dotnet-core)
+ * [Visual Studio Code](https://code.visualstudio.com/download)
 
  ## Using the ASP.NET Core sample
  
@@ -31,7 +32,7 @@ The samples require the following requirements to run.
 <table>
   <tbody>
     <tr>
-        <td align="left">RootUrl</td>
+        <td align="left">ServerUrl</td>
         <td align="left">Dashboard Server URL (Eg: http://localhost:5000/bi, http://demo.boldbi.com/bi).</td>
     </tr>
     <tr>
@@ -49,6 +50,18 @@ The samples require the following requirements to run.
     <tr>
         <td align="left">UserEmail</td>
         <td align="left">UserEmail of the Admin in your Bold BI, which would be used to get the dashboard list.</td>
+    </tr>
+     <tr>
+        <td align="left">DashboardId</td>
+        <td align="left">Item id of the dashboard to be embedded in your application. If you want all dashboards to be embedded in your application, you should provide an empty string.</td>
+    </tr>
+    <tr>
+        <td align="left">EmbedType</td>
+        <td align="left">BoldBI.EmbedType.Component.</td>
+    </tr>
+    <tr>
+        <td align="left">ExpirationTime</td>
+        <td align="left">Token expiration time.</td>
     </tr>
   </tbody>
 </table>
