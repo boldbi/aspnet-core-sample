@@ -20,7 +20,7 @@
 
 function ListDashboards(data) {
     if (typeof (data) != "undefined" && data != null) {
-                renderDashboard(data[0].Id);
+        renderDashboard(data[0].Id);
         data.forEach(function (element) {
             var divTag = document.createElement("div");
             divTag.innerHTML = element.Name;

@@ -51,10 +51,6 @@ The samples require the following requirements to run.
         <td align="left">UserEmail</td>
         <td align="left">UserEmail of the Admin in your Bold BI, which would be used to get the dashboard list.</td>
     </tr>
-     <tr>
-        <td align="left">DashboardId</td>
-        <td align="left">Item id of the dashboard to be embedded in your application. If you want all dashboards to be embedded in your application, you should provide an empty string.</td>
-    </tr>
     <tr>
         <td align="left">EmbedType</td>
         <td align="left">BoldBI.EmbedType.Component.</td>
