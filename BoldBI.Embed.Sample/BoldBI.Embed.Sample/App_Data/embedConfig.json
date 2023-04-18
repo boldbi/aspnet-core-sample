@@ -1,0 +1,8 @@
+{
+  "ServerUrl": "http://localhost:12345/bi", 
+  "UserEmail": "",
+  "EmbedSecret": "",
+  "EmbedType": "Component",
+  "Environment": "Enterprise",
+  "SiteIdentifier": "site/site1"
+}
