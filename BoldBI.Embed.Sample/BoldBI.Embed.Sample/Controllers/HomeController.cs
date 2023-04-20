@@ -5,6 +5,7 @@ using BoldBI.Embed.Sample.Models;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.IO;
 
 namespace BoldBI.Embed.Sample.Controllers
 {
@@ -12,12 +13,17 @@ namespace BoldBI.Embed.Sample.Controllers
     {
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult EmbedConfigErrorLog()
-        {
-            return View();
+            try
+            {
+                string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                string jsonString = System.IO.File.ReadAllText(Path.Combine(basePath, "app_data", "embedConfig.json"));
+                GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
+                return View();
+            }
+            catch (Exception)
+            {
+                return View("EmbedConfigErrorLog");
+            }
         }
 
         [HttpGet]

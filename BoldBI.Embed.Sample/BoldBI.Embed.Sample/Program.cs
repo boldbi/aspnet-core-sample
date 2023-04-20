@@ -1,10 +1,6 @@
-using System;
-using System.IO;
-using BoldBI.Embed.Sample.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,19 +8,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
-
-try
-{
-    string BasePath = AppDomain.CurrentDomain.BaseDirectory;
-    string jsonString = File.ReadAllText(BasePath + "\\app_data\\embedConfig.json");
-    GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
-}
-catch (Exception)
-{
-    app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=EmbedConfigErrorLog}");
-}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -46,4 +29,3 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-
