@@ -16,7 +16,7 @@ namespace BoldBI.Embed.Sample.Controllers
             try
             {
                 string basePath = AppDomain.CurrentDomain.BaseDirectory;
-                string jsonString = System.IO.File.ReadAllText(Path.Combine(basePath, "app_data", "embedConfig.json"));
+                string jsonString = System.IO.File.ReadAllText(Path.Combine(basePath, "embedConfig.json"));
                 GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
                 return View();
             }
