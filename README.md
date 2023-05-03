@@ -19,7 +19,7 @@ The samples require the following requirements to run.
 
  ## Using the ASP.NET Core sample
  
- * Open the solution file `BoldBI.Embed.Sample.sln` in Visual Studio Code. 
+ * Open the project folder in Visual Studio Code. 
 
  * Copy the downloaded embedConfig.json file, which is generated from the embed settings page of Bold BI server and paste into the sample application.
 
