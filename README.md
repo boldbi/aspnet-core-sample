@@ -21,7 +21,7 @@ The samples require the following requirements to run.
  
  * Open the solution file `BoldBI.Embed.Sample.sln` in Visual Studio Code. 
 
- * Copy the downloaded embedConfig.json file, which is generated from the embed settings page of Bold BI server and paste into the App_Data folder of sample application.
+ * Copy the downloaded embedConfig.json file, which is generated from the embed settings page of Bold BI server and paste into the sample application.
 
  * Run the application.
  
