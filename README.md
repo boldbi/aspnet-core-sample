@@ -13,20 +13,18 @@ This section guides you in using the Bold BI dashboard in your ASP.NET core samp
 
 The samples require the following requirements to run.
 
- * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
  * [.NET Core 6.0](https://dotnet.microsoft.com/download/dotnet-core)
  * [Visual Studio Code](https://code.visualstudio.com/download)
 
  ## Using the ASP.NET Core sample
  
- * Open the project folder in Visual Studio Code. 
+ * Open the ASP.NET Core sample in Visual Studio Code.
 
- * Copy the downloaded embedConfig.json file, which is generated from the embed settings page of Bold BI server and paste into the sample application.
-
- * Run the application.
+ * This [link](https://help.boldbi.com/cloud-bi/site-administration/embed-settings/) using able to download the embedConfig.json file. 
  
- # Properties that are configured in the sample
- The following properties are used in `embedConfig.json` file:
+ * Copy the downloaded embedConfig.json file, and paste it into the sample [application](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample/BoldBI.Embed.Sample).
+ 
+ * The following properties are used in `embedConfig.json` file:
 
 <meta charset="utf-8"/>
 <table>
@@ -52,6 +50,10 @@ The samples require the following requirements to run.
         <td align="left">UserEmail of the Admin in your Bold BI, which would be used to get the dashboard list.</td>
     </tr>
     <tr>
+        <td align="left">DashboardId</td>
+        <td align="left">Item id of the dashboard to be embedded in your application.</td>
+    </tr>
+    <tr>
         <td align="left">EmbedType</td>
         <td align="left">BoldBI.EmbedType.Component.</td>
     </tr>
@@ -62,6 +64,7 @@ The samples require the following requirements to run.
   </tbody>
 </table>
 
+ * Run the application.
 
 Please refer to the [help documentation](https://help.boldbi.com/embedded-bi/javascript-based/samples/v3.3.40-or-later/asp-net-core/#how-to-run-the-sample) to know how to run the sample.
 
