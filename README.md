@@ -20,49 +20,50 @@ The samples require the following requirements to run.
  
  * Open the ASP.NET Core sample in Visual Studio Code.
 
- * This [link](https://help.boldbi.com/cloud-bi/site-administration/embed-settings/) using able to download the embedConfig.json file. 
- 
- * Copy the downloaded embedConfig.json file, and paste it into the sample [application](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample/BoldBI.Embed.Sample).
+ * Download the embedConfig.json file from this [link](https://help.boldbi.com/cloud-bi/site-administration/embed-settings/)
+
+ * Copy the downloaded embedConfig.json file and place it into the following [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample/BoldBI.Embed.Sample) of the application.
+![Example image](https://user-images.githubusercontent.com/91586758/236446545-8fee653c-4239-49c3-87a1-7d2477681aac.png)
  
  * The following properties are used in `embedConfig.json` file:
 
-<meta charset="utf-8"/>
-<table>
-  <tbody>
-    <tr>
-        <td align="left">ServerUrl</td>
-        <td align="left">Dashboard Server URL (Eg: http://localhost:5000/bi, http://demo.boldbi.com/bi).</td>
-    </tr>
-    <tr>
-        <td align="left">EmbedSecret</td>
-        <td align="left">Get your EmbedSecret key from the Embed tab by enabling the `Enable embed authentication` on the Administration page https://help.boldbi.com/embedded-bi/site-administration/embed-settings/.</td>
-    </tr>
-    <tr>
-        <td align="left">SiteIdentifier</td>
-        <td align="left">For the Bold BI Enterprise edition, it should be like `site/site1`. For Bold BI Cloud, it should be an empty string.</td>
-    </tr>
-    <tr>
-        <td align="left">Environment</td>
-        <td align="left">Your Bold BI application environment. (If Cloud, you should use `cloud,` if Enterprise, you should use `enterprise`).</td>
-    </tr>
-    <tr>
-        <td align="left">UserEmail</td>
-        <td align="left">UserEmail of the Admin in your Bold BI, which would be used to get the dashboard list.</td>
-    </tr>
-    <tr>
-        <td align="left">DashboardId</td>
-        <td align="left">Item id of the dashboard to be embedded in your application.</td>
-    </tr>
-    <tr>
-        <td align="left">EmbedType</td>
-        <td align="left">BoldBI.EmbedType.Component.</td>
-    </tr>
-    <tr>
-        <td align="left">ExpirationTime</td>
-        <td align="left">Token expiration time.</td>
-    </tr>
-  </tbody>
-</table>
+    <meta charset="utf-8"/>
+    <table>
+    <tbody>
+        <tr>
+            <td align="left">ServerUrl</td>
+            <td align="left">Dashboard Server URL (Eg: http://localhost:5000/bi, http://demo.boldbi.com/bi).</td>
+        </tr>
+        <tr>
+            <td align="left">EmbedSecret</td>
+            <td align="left">Get your EmbedSecret key from the Embed tab by enabling the `Enable embed authentication` on the Administration page https://help.boldbi.com/embedded-bi/site-administration/embed-settings/.</td>
+        </tr>
+        <tr>
+            <td align="left">SiteIdentifier</td>
+            <td align="left">For the Bold BI Enterprise edition, it should be like `site/site1`. For Bold BI Cloud, it should be an empty string.</td>
+        </tr>
+        <tr>
+            <td align="left">Environment</td>
+            <td align="left">Your Bold BI application environment. (If Cloud, you should use `cloud,` if Enterprise, you should use `enterprise`).</td>
+        </tr>
+        <tr>
+            <td align="left">UserEmail</td>
+            <td align="left">UserEmail of the Admin in your Bold BI, which would be used to get the dashboard list.</td>
+        </tr>
+        <tr>
+            <td align="left">DashboardId</td>
+            <td align="left">Item id of the dashboard to be embedded in your application.</td>
+        </tr>
+        <tr>
+            <td align="left">EmbedType</td>
+            <td align="left">BoldBI.EmbedType.Component.</td>
+        </tr>
+        <tr>
+            <td align="left">ExpirationTime</td>
+            <td align="left">Token expiration time.</td>
+        </tr>
+    </tbody>
+    </table>
 
  * Run the application.
 
