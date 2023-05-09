@@ -20,7 +20,7 @@ The samples require the following requirements to run.
  
  * Open the ASP.NET Core sample in Visual Studio Code.
 
- * Download the embedConfig.json file by referring to this [help documentation](https://help.boldbi.com/cloud-bi/site-administration/embed-settings/)
+ * Download the embedConfig.json file by referring to this [help documentation](https://help.boldbi.com/cloud-bi/site-administration/embed-settings/). Ensure that the Embed Authentication button is activated on the Embed Settings page.
 
  * Copy the downloaded embedConfig.json file and place it into the following [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample/BoldBI.Embed.Sample) of the application. Please refer to the below image.
 ![EmbedConfig Image](https://user-images.githubusercontent.com/91586758/236446545-8fee653c-4239-49c3-87a1-7d2477681aac.png)
@@ -65,7 +65,9 @@ The samples require the following requirements to run.
     </tbody>
     </table>
 
- * Run the application.
+ * Execute the following commands in the terminal to add the necessary references to the project: `dotnet add package Newtonsoft.Json`
+
+ * Run the application using the command `dotnet run`.
 
 Please refer to the [help documentation](https://help.boldbi.com/embedded-bi/javascript-based/samples/v3.3.40-or-later/asp-net-core/#how-to-run-the-sample) to know how to run the sample.
 
