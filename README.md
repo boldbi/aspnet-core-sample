@@ -67,7 +67,7 @@ The samples require the following requirements to run.
 
  * You can restore the required dependencies by executing the following command in the terminal: `dotnet restore`.
 
- * You can build your.NET project by executing the `dotnet build` command in the terminal.
+ * You can build your .NET project by executing the `dotnet build` command in the terminal.
 
  * Run the application using the command `dotnet run`.
 
