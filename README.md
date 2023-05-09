@@ -65,7 +65,7 @@ The samples require the following requirements to run.
     </tbody>
     </table>
 
- * Execute the following commands in the terminal to add the necessary references to the project: `dotnet add package Newtonsoft.Json`
+ * Execute the following commands in the terminal to add the necessary reference to the project: `dotnet add package Newtonsoft.Json`
 
  * Run the application using the command `dotnet run`.
 
