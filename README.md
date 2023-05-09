@@ -65,7 +65,9 @@ The samples require the following requirements to run.
     </tbody>
     </table>
 
- * Execute the following commands in the terminal to add the necessary reference to the project: `dotnet add package Newtonsoft.Json`
+ * You can restore the required dependencies by executing the following command in the terminal: `dotnet restore`.
+
+ * You can build your.NET project by executing the `dotnet build` command in the terminal.
 
  * Run the application using the command `dotnet run`.
 
