@@ -22,13 +22,15 @@ The samples require the following requirements to run.
 
  * Ensure that you have enabled embed authentication on the embed settings [page](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/). If it is not enabled, enable it. Please refer to the below image.
 
-   ![Embed Settings](https://github.com/bold-bi/boldbi-sdk/assets/91586758/2b5fb866-71ee-4c99-b18d-490d5660425b)
+   ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/98cdaccc-635e-4ee7-b6f9-61434284afcb)
 
  * Download the embedConfig.json file by referring to this [link](https://help.boldbi.com/cloud-bi/site-administration/embed-settings/).
 
  * Copy the downloaded embedConfig.json file and place it into the following [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample) of the application. Please refer to the below image.
 
-   ![EmbedConfig Image](https://github.com/bold-bi/boldbi-sdk/assets/91586758/9dc61e3c-f70e-4f5d-8266-4ff0413867f4)
+   ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/bdb83a3e-02e4-4e99-ad57-717438e5ec5c)
+
+   ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/03ea78a6-ac67-4e83-8c61-64975432f1c5)
  
  * The following properties are used in `embedConfig.json` file:
 
