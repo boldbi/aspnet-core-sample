@@ -20,10 +20,15 @@ The samples require the following requirements to run.
  
  * Open the ASP.NET Core sample in Visual Studio Code.
 
- * Download the embedConfig.json file by referring to this [help documentation](https://help.boldbi.com/cloud-bi/site-administration/embed-settings/). Ensure that the Embed Authentication button is activated on the Embed Settings page.
+ * Ensure that you have enabled embed authentication on the embed settings [page](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/). If it is not enabled, enable it. Please refer to the below image.
 
- * Copy the downloaded embedConfig.json file and place it into the following [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample/BoldBI.Embed.Sample) of the application. Please refer to the below image.
-![EmbedConfig Image](https://user-images.githubusercontent.com/91586758/236446545-8fee653c-4239-49c3-87a1-7d2477681aac.png)
+   ![Embed Settings](https://github.com/bold-bi/boldbi-sdk/assets/91586758/2b5fb866-71ee-4c99-b18d-490d5660425b)
+
+ * Download the embedConfig.json file by referring to this [link](https://help.boldbi.com/cloud-bi/site-administration/embed-settings/).
+
+ * Copy the downloaded embedConfig.json file and place it into the following [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample) of the application. Please refer to the below image.
+
+   ![EmbedConfig Image](https://github.com/bold-bi/boldbi-sdk/assets/91586758/9dc61e3c-f70e-4f5d-8266-4ff0413867f4)
  
  * The following properties are used in `embedConfig.json` file:
 
@@ -44,7 +49,7 @@ The samples require the following requirements to run.
         </tr>
         <tr>
             <td align="left">Environment</td>
-            <td align="left">Your Bold BI application environment. (If Cloud, you should use `cloud,` if Enterprise, you should use `enterprise`).</td>
+            <td align="left">Your Bold BI application environment. (If it is cloud analytics server, use `BoldBI.Environment.Cloud`; if it is your own server, use `BoldBI.Environment.Enterprise`).</td>
         </tr>
         <tr>
             <td align="left">UserEmail</td>
