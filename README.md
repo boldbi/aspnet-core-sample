@@ -30,7 +30,7 @@ The samples require the following requirements to run.
 
    ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/bdb83a3e-02e4-4e99-ad57-717438e5ec5c)
 
-   ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/03ea78a6-ac67-4e83-8c61-64975432f1c5)
+   ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/f2915a54-010b-45c6-b608-3817cb713dc9)
  
  * The following properties are used in `embedConfig.json` file:
 
