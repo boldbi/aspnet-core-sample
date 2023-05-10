@@ -20,11 +20,11 @@ The samples require the following requirements to run.
  
  * Open the ASP.NET Core sample in Visual Studio Code.
 
- * Ensure that you have enabled embed authentication on the embed settings [page](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/). If it is not enabled, enable it. Please refer to the below image.
+ * Ensure that you have enabled embed authentication on the embed settings [page](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file). If it is not enabled, enable it. Please refer to the below image.
 
    ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/98cdaccc-635e-4ee7-b6f9-61434284afcb)
 
- * Download the embedConfig.json file by referring to this [link](https://help.boldbi.com/cloud-bi/site-administration/embed-settings/).
+ * Download the embedConfig.json file by referring to this [link](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file).
 
  * Copy the downloaded embedConfig.json file and place it into the following [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample) of the application. Please refer to the below image.
 
