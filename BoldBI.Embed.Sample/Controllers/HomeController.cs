@@ -64,8 +64,8 @@ namespace BoldBI.Embed.Sample.Controllers
         }
 
         [HttpPost]
-        [Route("GetDetails")]
-        public string GetDetails([FromBody] object embedQuerString)
+        [Route("AuthorizationServer")]
+        public string AuthorizationServer([FromBody] object embedQuerString)
         {
             var embedClass = Newtonsoft.Json.JsonConvert.DeserializeObject<EmbedClass>(embedQuerString.ToString());
 
