@@ -22,15 +22,15 @@ The samples require the following requirements to run.
 
  * Ensure that you have enabled embed authentication on the embed settings [page](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file). If it is not enabled, enable it. Please refer to the below image.
 
-   ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/98cdaccc-635e-4ee7-b6f9-61434284afcb)
+   ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/b06bb792-2d80-4409-b13d-fb713922957b)
 
- * Download the embedConfig.json file by referring to this [link](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file).
+ * Download the embedConfig.json file by referring to this [link](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file). Please refer to the below image.
+ 
+   ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/f2915a54-010b-45c6-b608-3817cb713dc9)
 
  * Copy the downloaded embedConfig.json file and place it into the following [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample) of the application. Please refer to the below image.
 
    ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/bdb83a3e-02e4-4e99-ad57-717438e5ec5c)
-
-   ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/f2915a54-010b-45c6-b608-3817cb713dc9)
  
  * The following properties are used in `embedConfig.json` file:
 
@@ -67,7 +67,7 @@ The samples require the following requirements to run.
         </tr>
         <tr>
             <td align="left">ExpirationTime</td>
-            <td align="left">Token expiration time.</td>
+            <td align="left">Token expiration time. (In the EmbedConfig.json file, the default token expiration time is 10000 seconds).</td>
         </tr>
     </tbody>
     </table>
