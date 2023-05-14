@@ -1,38 +1,36 @@
-# BoldBI Embedding ASP.NET Core Samples
+# BoldBI Embedded Sample in ASP.NET Core
 
-This sample demonstrates the dashboard rendering with the list of dashboards available in your Bold BI server.
+This project was generated with ASP.NET Core CLI version 6.0. This sample demonstrates the dashboard rendering with the list of dashboards available in your Bold BI server.
 
-This section guides you in using the Bold BI dashboard in your ASP.NET core sample application.
+## Dashboard View
 
- * [Requirements to run the demo](#requirements-to-run-the-demo)
- * [Using the ASP.NET Core sample](#using-the-asp.net-core-samples)
- * [Online Demos](#online-demos)
- * [Documentation](#documentation)
+![Dashboard View](https://github.com/boldbi/aspnet-core-sample/assets/91586758/73318269-f8e9-4b49-b597-d82850c60952)
 
- ## Requirements to run the demo
-
-The samples require the following requirements to run.
+ ## Requirements/Prerequisites
 
  * [.NET Core 6.0](https://dotnet.microsoft.com/download/dotnet-core)
  * [Visual Studio Code](https://code.visualstudio.com/download)
 
- ## Using the ASP.NET Core sample
- 
- * Open the ASP.NET Core sample in Visual Studio Code.
+ ## Help Link:
 
- * Ensure that you have enabled embed authentication on the embed settings [page](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file). If it is not enabled, enable it. Please refer to the below image.
+ * https://help.boldbi.com/embedded-bi/faq/where-can-i-find-the-product-version/
 
-   ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/b06bb792-2d80-4409-b13d-fb713922957b)
+ ## Supported browser
+  
+  * Google Chrome, Microsoft Edge, Mozilla Firefox, Mac Machine.
 
- * Download the embedConfig.json file by referring to this [link](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file). Please refer to the below image.
- 
+ ## Configuration
+
+  * Ensure that you have enabled embed authentication on the embed settings [page](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file). If it is not enabled, enable it. Please refer to the below image.
+  ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/b06bb792-2d80-4409-b13d-fb713922957b)
+
+  * Download the embedConfig.json file by referring to this [link](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file). Please refer to the below image.
    ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/f2915a54-010b-45c6-b608-3817cb713dc9)
 
- * Copy the downloaded embedConfig.json file and place it into the following [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample) of the application. Please refer to the below image.
+  * Copy the downloaded embedConfig.json file and place it into the following [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample) of the application. Please refer to the below image.
+  ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/bdb83a3e-02e4-4e99-ad57-717438e5ec5c)
 
-   ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/bdb83a3e-02e4-4e99-ad57-717438e5ec5c)
- 
- * The following properties are used in `embedConfig.json` file:
+  * The following properties are used in `embedConfig.json` file:
 
     <meta charset="utf-8"/>
     <table>
@@ -72,13 +70,34 @@ The samples require the following requirements to run.
     </tbody>
     </table>
 
- * You can restore the required dependencies by executing the following command in the terminal: `dotnet restore`.
 
- * You can build your .NET project by executing the `dotnet build` command in the terminal.
+ ## How to run sample
+    
+  1. Open Windows PowerShell in this file [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample).
 
- * Run the application using the command `dotnet run`.
+  2. Execute the command `dotnet restore` to restore the necessary packages. Once the packages have been restored, use the `dotnet build` command to build the project.
+  
+  3. Run the application using the command `dotnet run`.
+
+ ## Developer IDE
+
+  * Visual studio code(https://code.visualstudio.com/download)
+
+ ## Steps to run from visual studio code
+ 
+  * Open the ASP.NET Core sample in Visual Studio Code. 
+   
+  * Open the terminal in Visual Studio Code, You can restore the required dependencies by executing the following command in the terminal: `dotnet restore`.
+ 
+  * You can build your .NET project by executing the `dotnet build` command in the terminal.
+ 
+  * Run the application using the command `dotnet run`.
 
 Please refer to the [help documentation](https://help.boldbi.com/embedded-bi/javascript-based/samples/v3.3.40-or-later/asp-net-core/#how-to-run-the-sample) to know how to run the sample.
+
+## Important notes:
+
+For security reasons, in a real world application, passwords and secrets should not be stored in config files. Instead, consider securing your credentials with an application such as Key Vault.
 
 ## Online Demos
 
