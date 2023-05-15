@@ -8,7 +8,7 @@ This project was generated using ASP.NET Core CLI version 6.0 or a later version
 
  ## Requirements/Prerequisites
 
- * [.NET Core 6.0](https://dotnet.microsoft.com/download/dotnet-core) or a later version.
+ * [.NET Core 6.0 or later](https://dotnet.microsoft.com/download/dotnet-core)
  * [Visual Studio Code](https://code.visualstudio.com/download).
 
  ### Help link
