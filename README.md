@@ -79,7 +79,7 @@ This project was generated using ASP.NET Core CLI version 6.0 or a later version
 
   * Visual studio code(https://code.visualstudio.com/download)
 
- ## How to run sample using visual studio code
+  ### How to run sample using visual studio code
  
   * Open the ASP.NET Core sample in Visual Studio Code. 
    
