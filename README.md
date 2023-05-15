@@ -1,6 +1,6 @@
 # BoldBI Embedded Sample in ASP.NET Core
 
-This project was generated with ASP.NET Core CLI version 6.0. This sample demonstrates the dashboard rendering with the list of dashboards available in your Bold BI server.
+This project was generated using ASP.NET Core CLI version 6.0 or a later version that is installed on your system before it was compiled. This sample demonstrates the dashboard rendering with the list of dashboards available in your Bold BI server.
 
 ## Dashboard View
 
@@ -8,20 +8,20 @@ This project was generated with ASP.NET Core CLI version 6.0. This sample demons
 
  ## Requirements/Prerequisites
 
- * [.NET Core 6.0](https://dotnet.microsoft.com/download/dotnet-core)
- * [Visual Studio Code](https://code.visualstudio.com/download)
+ * [.NET Core 6.0](https://dotnet.microsoft.com/download/dotnet-core) or a later version.
+ * [Visual Studio Code](https://code.visualstudio.com/download).
 
- ## Help Link:
+ ### Help link
 
  * https://help.boldbi.com/embedded-bi/faq/where-can-i-find-the-product-version/
 
- ## Supported browser
+ ### Supported browsers
   
-  * Google Chrome, Microsoft Edge, Mozilla Firefox, Mac Machine.
+  * Google Chrome, Microsoft Edge, Mozilla Firefox.
 
  ## Configuration
 
-  * Ensure that you have enabled embed authentication on the embed settings [page](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file). If it is not enabled, enable it. Please refer to the below image.
+  * Ensure that you have enabled embed authentication on the embed settings [page](https://github.com/boldbi/aspnet-core-sample/assets/91586758/68695d1a-ebd0-4577-a6bb-d37e89e98379). If it is not enabled, enable it. Please refer to the below image.
   ![Embed Settings](https://github.com/boldbi/aspnet-core-sample/assets/91586758/b06bb792-2d80-4409-b13d-fb713922957b)
 
   * Download the embedConfig.json file by referring to this [link](https://help.boldbi.com/embedded-bi/site-administration/embed-settings/#get-embed-configuration-file). Please refer to the below image.
@@ -60,10 +60,6 @@ This project was generated with ASP.NET Core CLI version 6.0. This sample demons
             <td align="left">Item id of the dashboard to be embedded in your application.</td>
         </tr>
         <tr>
-            <td align="left">EmbedType</td>
-            <td align="left">BoldBI.EmbedType.Component.</td>
-        </tr>
-        <tr>
             <td align="left">ExpirationTime</td>
             <td align="left">Token expiration time. (In the EmbedConfig.json file, the default token expiration time is 10000 seconds).</td>
         </tr>
@@ -71,9 +67,9 @@ This project was generated with ASP.NET Core CLI version 6.0. This sample demons
     </table>
 
 
- ## How to run sample
+ ## How to run sample using command prompt 
     
-  1. Open Windows PowerShell in this file [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample).
+  1. Open command prompt in this file [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample).
 
   2. Execute the command `dotnet restore` to restore the necessary packages. Once the packages have been restored, use the `dotnet build` command to build the project.
   
@@ -83,7 +79,7 @@ This project was generated with ASP.NET Core CLI version 6.0. This sample demons
 
   * Visual studio code(https://code.visualstudio.com/download)
 
- ## Steps to run from visual studio code
+ ## How to run sample using visual studio code
  
   * Open the ASP.NET Core sample in Visual Studio Code. 
    
@@ -97,7 +93,7 @@ Please refer to the [help documentation](https://help.boldbi.com/embedded-bi/jav
 
 ## Important notes:
 
-For security reasons, in a real world application, passwords and secrets should not be stored in config files. Instead, consider securing your credentials with an application such as Key Vault.
+It is recommended to not store passwords and sensitive information in configuration files for security reasons, in a real-world application. Instead, you should consider using a secure application, such as Key Vault, to safeguard your credentials.
 
 ## Online Demos
 
