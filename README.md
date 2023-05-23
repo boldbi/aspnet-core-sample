@@ -4,7 +4,7 @@ This project was generated using ASP.NET Core version 6.0 or a later version tha
 
 ## Dashboard view
 
-![Dashboard View](https://github.com/boldbi/aspnet-core-sample/assets/91586758/43ac1183-3130-4377-8fcd-aeb0b7a71a4c)
+![Dashboard View](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4af68f49-ffc0-400a-a323-55a3f3600a1d)
 
  ## Requirements/Prerequisites
 
@@ -50,7 +50,8 @@ This project was generated using ASP.NET Core version 6.0 or a later version tha
  
   * You can build your .NET project by executing the `dotnet build` command in the terminal.
  
-  * Run the application using the command `dotnet run`. Application launched in default browser in port number.
+  * Run the application using the command `dotnet run`. After executing the command, the application will automatically launch in the default browser, accessible at the specific port number (https://localhost:5001). Please refer to the following image.
+    ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4af68f49-ffc0-400a-a323-55a3f3600a1d)
 
 Please refer to the [help documentation](https://help.boldbi.com/embedded-bi/javascript-based/samples/v3.3.40-or-later/asp-net-core/#how-to-run-the-sample) to know how to run the sample.
 
