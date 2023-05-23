@@ -6,18 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="App_Data\**" />
     <Compile Remove="wwwroot\lib\**" />
+    <Content Remove="App_Data\**" />
     <Content Remove="wwwroot\lib\**" />
+    <EmbeddedResource Remove="App_Data\**" />
     <EmbeddedResource Remove="wwwroot\lib\**" />
+    <None Remove="App_Data\**" />
     <None Remove="wwwroot\lib\**" />
   </ItemGroup>
 
   <ItemGroup>
      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="App_Data\" />
   </ItemGroup>
 
 </Project>
