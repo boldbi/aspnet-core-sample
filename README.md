@@ -37,7 +37,7 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
 
   2. Execute the command `dotnet restore` to restore the necessary packages. Once the packages have been successfully restored, use the `dotnet build` command to build the project.
   
-  3. Finally, run the application using the command dotnet run.
+  3. Finally, run the application using the command `dotnet run`.
 
  ## Developer IDE
 
