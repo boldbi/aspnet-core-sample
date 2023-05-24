@@ -17,12 +17,17 @@
         var environment = "@GlobalAppSettings.EmbedDetails.Environment";
         var embedType = "@GlobalAppSettings.EmbedDetails.EmbedType";
         var authorizationServerUrl = "@Url.Action("AuthorizationServer", "Home")";
+        var getDashboardsUrl = "@Url.Action("GetDashboards", "Home")";
     </script>
 </head>
 
-<body onload="renderDashboard(dashboardId)">
-    <div id="viewer-section">
-        <div id="dashboard"></div>
+<body onload="Init()">
+    <div id="container">
+        <div class="header-section">
+            <div id="grid-title">All Dashboard</div>
+        </div>
+        <div id="panel">
+        </div>
     </div>
-</body>
+   </body>
 </html>

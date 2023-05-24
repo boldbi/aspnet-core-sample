@@ -1,6 +1,6 @@
 # BoldBI Embedded Sample in ASP.NET Core
 
-This project was generated using ASP.NET Core version 6.0 or a later version that is installed on your system before it was compiled. This sample demonstrates the dashboard rendering with the list of dashboards available in your Bold BI server.
+This project was generated using ASP.NET Core version 6.0. This sample demonstrates how to embed the dashboard that is available on your Bold BI server.
 
 ## Dashboard view
 
