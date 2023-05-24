@@ -16,7 +16,7 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
 
  #### Supported browsers
   
-  * Google Chrome, Microsoft Edge, Mozilla Firefox, Safari browser.
+  * Google Chrome, Microsoft Edge, Mozilla Firefox, and Safari.
 
  ## Configuration
 
