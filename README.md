@@ -10,11 +10,11 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
 
  * [.NET Core 6.0](https://dotnet.microsoft.com/download/dotnet-core)
 
- ### Help link
+ #### Help link
 
  * https://help.boldbi.com/embedded-bi/faq/where-can-i-find-the-product-version/
 
- ### Supported browsers
+ #### Supported browsers
   
   * Google Chrome, Microsoft Edge, Mozilla Firefox, Safari browser.
 
@@ -28,6 +28,7 @@ This project was created using ASP.NET Core 6.0. The purpose of this application
    ![EmbedConfig Properties](https://github.com/boldbi/aspnet-core-sample/assets/91586758/d6ce925a-0d4c-45d2-817e-24d6d59e0d63)
 
   * Copy the downloaded embedConfig.json file and paste it into the designated [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample) within the application. Please ensure that you have placed it in the application as shown in the following image.
+    
     ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/bdb83a3e-02e4-4e99-ad57-717438e5ec5c)
 
  ## Run a Sample Using Command Prompt 
