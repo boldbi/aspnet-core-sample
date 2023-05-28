@@ -13,10 +13,15 @@ namespace BoldBI.Embed.Sample.Controllers
     {
         public IActionResult Index()
         {
+            try {
             string basePath = AppDomain.CurrentDomain.BaseDirectory;
             string jsonString = System.IO.File.ReadAllText(Path.Combine(basePath, "embedConfig.json"));
             GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
             return View();
+            }
+            catch {
+                return View("EmbedConfigErrorLog");
+            }
         }
 
         [HttpGet]
