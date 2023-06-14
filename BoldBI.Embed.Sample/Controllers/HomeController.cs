@@ -25,6 +25,13 @@ namespace BoldBI.Embed.Sample.Controllers
         }
 
         [HttpGet]
+        [Route("DashboardListing")]
+        public IActionResult DashboardListing()
+        {
+            return View();
+        }
+
+        [HttpGet]
         [Route("GetDashboards")]
         public string GetDashboards()
         {
