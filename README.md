@@ -41,7 +41,7 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
   
   3. Finally, run the application using the command `dotnet run`. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., https://localhost:5001). Copy this URL and paste it into your default web browser.
 
-> **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the "dashboardlisting" URL (such as https://localhost:5001/dashboardlisting) to enable the dashboards list.
+> **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the `dashboardlisting` URL (such as https://localhost:5001/dashboardlisting) to enable the dashboards list.
 
  ## Developer IDE
 
@@ -59,7 +59,7 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
 
     ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/4af68f49-ffc0-400a-a323-55a3f3600a1d)
 
-> **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the "dashboardlisting" URL (such as https://localhost:5001/dashboardlisting) to enable the dashboards list.
+> **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the `dashboardlisting` URL (such as https://localhost:5001/dashboardlisting) to enable the dashboards list.
 
 Please refer to the [help documentation](https://help.boldbi.com/embedding-options/embedding-sdk/samples/asp-net-core/#how-to-run-the-sample) to know how to run the sample.
 
