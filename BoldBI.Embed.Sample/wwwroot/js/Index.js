@@ -49,12 +49,9 @@ function renderDashboard(dashboardId) {
         authorizationServer: {
             url: authorizationServerUrl  
         }
-
     });
 
-    console.log(this.dashboard);
     this.dashboard.loadDashboard();
-
 };
 
 function embedConfigErrorDialog() {
