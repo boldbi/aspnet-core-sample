@@ -53,47 +53,9 @@ function renderDashboard(dashboardId, viewInfo) {
         height: "100%",
         expirationTime: 10000,
         authorizationServer: {
-            url: authorizationServerUrl
-        },
-        dashboardSettings: {
-            filterOverviewSettings: {
-                viewId: viewInfo ? viewInfo.viewId : '',
-                viewName: viewInfo ? viewInfo.viewName : null,
-                showSaveIcon: true,
-                showSaveAsIcon: true,
-                showViewSavedFilterIcon: true
-            },
-            onSaveFilter: function (args) {
-                console.log(args);
-                queryData = args.data;
-                childDashboardId = args.model.itemId,
-                    saveViewFilter(args);
-            },
-            onSaveAsFilter: function (args) {
-                console.log(args);
-                queryData = args.data;
-                saveAsViewFilter(args);
-            },
-            onViewSavedFilters: function (args) {
-                console.log(args);
-                openViewPanel(currentDashboardId);
-            },
-            beforeIconRender: function (args) {
-                var icon = $("<div/>", {
-                    "class": "server-banner-icon e-dashboard-banner-icon bbi-dbrd-designer-hoverable su su-view e-icon-dbrd-theme",
-                    "data-tooltip": "Views",
-                    "data-name": "dashboardviews",
-                    "data-event": true,
-                    "onclick": "openViewPanel(\'" + currentDashboardId + "\')",
-                    css: { "font-size": "18px" }
-                });
-                args.iconsinformation[0].items.push(icon);
-            }
-        },
-        actionBegin: "renderActionBegin",
-        filterParameters: viewInfo ? viewInfo.queryString : ""
+            url: authorizationServerUrl  
+        }
     });
-    console.log(this.dashboard);
     this.dashboard.loadDashboard();
 };
 
