@@ -11,11 +11,16 @@
     <script type="text/javascript" src="~/js/Index.js"></script>
     <link rel="stylesheet" href="~/css/site.css" />
     <script type="text/javascript">
-        var rootUrl = "@GlobalAppSettings.EmbedDetails.ServerUrl";
+        @* var rootUrl = "@GlobalAppSettings.EmbedDetails.ServerUrl";
         var dashboardId = "@GlobalAppSettings.EmbedDetails.DashboardId";
         var siteIdentifier = "@GlobalAppSettings.EmbedDetails.SiteIdentifier";
         var environment = "@GlobalAppSettings.EmbedDetails.Environment";
-        var embedType = "@GlobalAppSettings.EmbedDetails.EmbedType";
+        var embedType = "@GlobalAppSettings.EmbedDetails.EmbedType"; *@
+        var rootUrl = "@ViewBag.ServerUrl";
+        var dashboardId = "@ViewBag.DashboardId";
+        var siteIdentifier = "@ViewBag.SiteIdentifier";
+        var environment = "@ViewBag.Environment";
+        var embedType = "@ViewBag.EmbedType";
         var authorizationServerUrl = "@Url.Action("AuthorizationServer", "Home")";
         var getDashboardsUrl = "@Url.Action("GetDashboards", "Home")";
     </script>
