@@ -13,13 +13,23 @@ namespace BoldBI.Embed.Sample.Controllers
     {
         public IActionResult Index()
         {
-            try {
-            string basePath = AppDomain.CurrentDomain.BaseDirectory;
-            string jsonString = System.IO.File.ReadAllText(Path.Combine(basePath, "embedConfig.json"));
-            GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
-            return View();
+            try
+            {
+                string basePath = AppDomain.CurrentDomain.BaseDirectory;
+                string jsonString = System.IO.File.ReadAllText(Path.Combine(basePath, "embedConfig.json"));
+                GlobalAppSettings.EmbedDetails = JsonConvert.DeserializeObject<EmbedDetails>(jsonString);
+
+                // Pass specific properties to the view using ViewBag
+                ViewBag.DashboardId = GlobalAppSettings.EmbedDetails.DashboardId;
+                ViewBag.ServerUrl = GlobalAppSettings.EmbedDetails.ServerUrl;
+                ViewBag.EmbedType = GlobalAppSettings.EmbedDetails.EmbedType;
+                ViewBag.Environment = GlobalAppSettings.EmbedDetails.Environment;
+                ViewBag.SiteIdentifier = GlobalAppSettings.EmbedDetails.SiteIdentifier;
+
+                return View();
             }
-            catch {
+            catch
+            {
                 return View("EmbedConfigErrorLog");
             }
         }
@@ -28,6 +38,13 @@ namespace BoldBI.Embed.Sample.Controllers
         [Route("DashboardListing")]
         public IActionResult DashboardListing()
         {
+            // Pass specific properties to the view using ViewBag
+            ViewBag.DashboardId = GlobalAppSettings.EmbedDetails.DashboardId;
+            ViewBag.ServerUrl = GlobalAppSettings.EmbedDetails.ServerUrl;
+            ViewBag.EmbedType = GlobalAppSettings.EmbedDetails.EmbedType;
+            ViewBag.Environment = GlobalAppSettings.EmbedDetails.Environment;
+            ViewBag.SiteIdentifier = GlobalAppSettings.EmbedDetails.SiteIdentifier;
+
             return View();
         }
 
