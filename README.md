@@ -29,19 +29,19 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
 
     ![EmbedConfig image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/bdb83a3e-02e4-4e99-ad57-717438e5ec5c)
 
-## Run a Sample Using Command Line Interface 
+## Run a Sample Using Command Line Interface
 
   1. Open the command line interface and navigate to the specified file [location](https://github.com/boldbi/aspnet-core-sample/tree/master/BoldBI.Embed.Sample) where the project is located.
 
   2. Execute the command `dotnet restore` to restore the necessary packages. Once the packages have been successfully restored, use the `dotnet build` command to build the project.
   
-  3. Finally, run the application using the command `dotnet run`. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., http://localhost:5000). Copy this URL and paste it into your default web browser.
+  3. Finally, run the application using the command `dotnet run`. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., [http://localhost:5000](http://localhost:5000)). Copy this URL and paste it into your default web browser.
 
-> **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the `dashboardlisting` URL (such as http://localhost:5000/dashboardlisting) to enable the dashboards list.
+> **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the `dashboardlisting` URL (such as [http://localhost:5000/dashboardlisting](http://localhost:5000/dashboardlisting)) to enable the dashboards list.
 
 ## Developer IDE
 
-* Visual studio code(https://code.visualstudio.com/download)
+* [Visual Studio Code](https://code.visualstudio.com/download)
 
 ### Run a Sample Using Visual Studio Code
 
@@ -51,11 +51,11 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
 
 * Build your .NET project by executing the `dotnet build` command in the terminal.
 
-* To run the application, use the command `dotnet run` in the terminal. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., http://localhost:5000). Copy this URL and paste it into your default web browser.
+* To run the application, use the command `dotnet run` in the terminal. After the application has started, it will display a URL in the `command line interface`, typically something like (e.g., [http://localhost:5000](http://localhost:5000)). Copy this URL and paste it into your default web browser.
 
     ![dashboard image](https://github.com/boldbi/aspnet-core-sample/assets/91586758/6c03cba1-beeb-4be2-8a9e-f77f6a3ebf91)
 
-> **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the `dashboardlisting` URL (such as http://localhost:5000/dashboardlisting) to enable the dashboards list.
+> **NOTE:** We represent the dashboard embedding by default without the dashboards listing sidebar. You must navigate to the `dashboardlisting` URL (such as [http://localhost:5000/dashboardlisting](http://localhost:5000/dashboardlisting)) to enable the dashboards list.
 
 Please refer to the [help documentation](https://help.boldbi.com/embedding-options/embedding-sdk/samples/asp-net-core/#how-to-run-the-sample) to know how to run the sample.
 
