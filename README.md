@@ -41,7 +41,7 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
 
 ## Developer IDE
 
-* [Visual Studio Code](https://code.visualstudio.com/download)
+* Visual studio code(<https://code.visualstudio.com/download>)
 
 ### Run a Sample Using Visual Studio Code
 
