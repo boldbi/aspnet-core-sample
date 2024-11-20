@@ -47,10 +47,19 @@ function renderDashboard(dashboardId) {
         height: "100%",
         expirationTime: 10000,
         authorizationServer: {
-            url: authorizationServerUrl  
+            url: authorizationServerUrl
+        },
+        dashboardSettings: {
+            filterOverviewSettings: {
+                showSaveAsIcon: true,
+                showSaveIcon: true,
+                showViewSavedFilterIcon: true
+            },
+            onViewSavedFilters: function (args) {
+                getDashboardViews();
+            }
         }
     });
-
     this.dashboard.loadDashboard();
 };
 
