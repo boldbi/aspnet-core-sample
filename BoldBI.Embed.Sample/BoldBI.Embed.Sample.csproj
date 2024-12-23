@@ -3,6 +3,9 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>BoldBI.Embed.Sample</RootNamespace>
+	<NuGetAuditMode>all</NuGetAuditMode>
+	<NugetAuditLevel>low</NugetAuditLevel>
+	<NuGetAudit>true</NuGetAudit>
   </PropertyGroup>
 
   <ItemGroup>

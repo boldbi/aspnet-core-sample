@@ -1,6 +1,6 @@
 # Bold BI Embedded Sample in .NET Core
 
-This project was created using ASP.NET Core 6.0. This application aims to demonstrate how to render the dashboard available on your Bold BI server.
+This project was created using ASP.NET Core 8.0. This application aims to demonstrate how to render the dashboard available on your Bold BI server.
 
 ## Dashboard view
 
@@ -8,7 +8,7 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
 
 ## Requirements/Prerequisites
 
-* [.NET Core 6.0](https://dotnet.microsoft.com/download/dotnet-core)
+* [.NET Core 8.0](https://dotnet.microsoft.com/download/dotnet-core)
 
 ### Supported browsers
   
@@ -41,7 +41,7 @@ This project was created using ASP.NET Core 6.0. This application aims to demons
 
 ## Developer IDE
 
-* Visual studio code(<https://code.visualstudio.com/download>)
+* Visual Studio Code(<https://code.visualstudio.com/download>)
 
 ### Run a Sample Using Visual Studio Code
 
