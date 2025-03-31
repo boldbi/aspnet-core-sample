@@ -46,9 +46,7 @@ function renderDashboard(dashboardId) {
         width: "100%",
         height: "100%",
         expirationTime: 10000,
-        authorizationServer: {
-            url: authorizationServerUrl  
-        }
+        token: "eyJhbGciOiJIUzkYmEtMjM2NWUyNjU1MzBlIiwiSVAiOiI6OjEzQpL3NpdGUvc2l0ZTEiLCJhdWQiOiJodHRwOFIwug7eQR0ZPLNhUkhy9ddoidiqlE915obE",//This must be your unique access token
     });
 
     this.dashboard.loadDashboard();
