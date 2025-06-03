@@ -48,12 +48,13 @@ ul {
     margin-left: 55px;
 }
 
-#container {
+/* #container {
     width: 13%;
     float: left;
     height: 100%;
     float: left;
-    background: #f4f4f4;
+    background: #fff;
+    border-right: 1px dotted #8d8181;
     height: 100%;
     box-shadow: 2px 0 4px 0 rgba(0, 0, 0, .12);
     overflow: auto;
@@ -69,9 +70,57 @@ ul {
 #panel {
     width: 100%;
     float: left;
-    background: #f4f4f4;
+    background: #fff;
     overflow: auto;
+} */
+
+#container {
+  width: 13%;
+  height: 100vh;
+  float: left;
+  background: #fff;
+  border-right: 1px dotted #8d8181;
+  box-shadow: 2px 0 4px 0 rgba(0, 0, 0, 0.12);
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
+
+.header-section {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+#grid-title {
+  font-size: 17px;
+  font-weight: bold;
+  border-bottom: 1px solid #333;
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+#panel {
+  width: 100%;
+  float: left;
+  background: #fff;
+}
+
+#panel div {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#panel div:hover {
+  background-color: #f0f0f0;
+}
+
 
 #dashboard {
     width: 100%;
@@ -87,7 +136,7 @@ ul {
 }
 
 #viewer-section {
-    width: 87%;
+    width: 86%;
     height: 100%;
     float: left;
 }

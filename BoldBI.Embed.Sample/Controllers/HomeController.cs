@@ -33,21 +33,7 @@ namespace BoldBI.Embed.Sample.Controllers
                 return View("EmbedConfigErrorLog");
             }
         }
-
-        [HttpGet]
-        [Route("DashboardListing")]
-        public IActionResult DashboardListing()
-        {
-            // Pass specific properties to the view using ViewBag
-            ViewBag.DashboardId = GlobalAppSettings.EmbedDetails.DashboardId;
-            ViewBag.ServerUrl = GlobalAppSettings.EmbedDetails.ServerUrl;
-            ViewBag.EmbedType = GlobalAppSettings.EmbedDetails.EmbedType;
-            ViewBag.Environment = GlobalAppSettings.EmbedDetails.Environment;
-            ViewBag.SiteIdentifier = GlobalAppSettings.EmbedDetails.SiteIdentifier;
-
-            return View();
-        }
-
+        
         [HttpGet]
         [Route("GetDashboards")]
         public string GetDashboards()

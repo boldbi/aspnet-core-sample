@@ -1,4 +1,6 @@
-﻿function Init() {
+﻿var token = ""
+var isMultiTab = false
+function Init() {
     var http = new XMLHttpRequest();
     http.open("GET", getDashboardsUrl, true);
     http.responseType = 'json';
@@ -20,7 +22,7 @@
 
 function ListDashboards(data) {
     if (typeof (data) != "undefined" && data != null) {
-        renderDashboard(data[0].Id);
+        getDashboardAccessToken(data[0].Id, 'view', '100000');
         data.forEach(function (element) {
             var divTag = document.createElement("div");
             divTag.innerHTML = element.Name;
@@ -35,20 +37,87 @@ function ListDashboards(data) {
     }
 }
 
+// 1. Generate UUID
+function generateUUID() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+    const r = Math.random() * 16 | 0;
+    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
+// 2. Build embed query string
+function generateEmbedQueryString(dashboardId, mode, expirationTime) {
+  return [
+    `embed_nonce=${generateUUID()}`,
+    `embed_dashboard_id=${dashboardId}`,
+    `embed_mode=${mode}`,
+    `embed_timestamp=${Math.floor(Date.now() / 1000)}`,
+    `embed_expirationtime=${expirationTime}`
+  ].join('&');
+}
+
+// 3. Build request payload
+function buildRequestPayload(queryString) {
+  return {
+    embedQuerString: queryString,
+    dashboardServerApiUrl: `${rootUrl}/api/${siteIdentifier}`
+  };
+}
+
+// 4. Send request and render dashboard
+function sendAuthorizationRequest(payload, dashboardId) {
+  $.ajax({
+    url: authorizationServerUrl,
+    type: "POST",
+    async: true,
+    data: JSON.stringify(payload),
+    contentType: "application/json",
+   success: function (response) {
+        try {
+            const parsed = typeof response === 'string' ? JSON.parse(response) : response;
+            let accessToken;
+
+            if (Array.isArray(parsed?.Data)) { // For multiTab dashboard
+                for (const item of parsed.Data) {
+                    if (item.access_token) {
+                        accessToken = item.access_token;
+                        isMultiTab = true
+                        break;
+                    }
+                }
+            } 
+            else{
+                accessToken = parsed.Data.access_token;
+            }
+
+            if (accessToken) {
+                token = accessToken;
+                renderDashboard(dashboardId);
+            } else {
+                alert("Access token not found in response.");
+            }
+        } catch (error) {
+            alert("Error parsing response:", error);
+        }
+        },
+  });
+}
+
+// 5. Main function to call
+function getDashboardAccessToken(dashboardId, mode, expirationTime) {
+  const queryString = generateEmbedQueryString(dashboardId, mode, expirationTime);
+  const payload = buildRequestPayload(queryString);
+  sendAuthorizationRequest(payload, dashboardId);
+}
+
 function renderDashboard(dashboardId) {
     this.dashboard = BoldBI.create({
         serverUrl: rootUrl + "/" + siteIdentifier,
         dashboardId: dashboardId,
         embedContainerId: "dashboard",
-        mode: BoldBI.Mode.View,
-        embedType: embedType,
-        environment: environment,
-        width: "100%",
-        height: "100%",
-        expirationTime: 10000,
-        authorizationServer: {
-            url: authorizationServerUrl  
-        }
+        embedToken: token,
+        isMultiTabDashboard: isMultiTab
     });
 
     this.dashboard.loadDashboard();
