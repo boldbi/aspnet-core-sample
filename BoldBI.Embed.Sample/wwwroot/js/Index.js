@@ -91,7 +91,7 @@ function sendAuthorizationRequest(payload, dashboardId) {
                     if (item.access_token) {
                         accessToken = item.access_token;
                         isMultiTab = true;
-                        expires = item.expires;
+                        expires = item[".expires"];
                         break;
                     }
                 }
