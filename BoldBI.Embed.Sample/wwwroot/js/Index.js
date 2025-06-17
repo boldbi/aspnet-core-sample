@@ -1,5 +1,6 @@
 ﻿var token = ""
 var isMultiTab = false
+let tokenExpiry = null;
 function Init() {
     var http = new XMLHttpRequest();
     http.open("GET", getDashboardsUrl, true);
@@ -76,23 +77,27 @@ function sendAuthorizationRequest(payload, dashboardId) {
    success: function (response) {
         try {
             const parsed = typeof response === 'string' ? JSON.parse(response) : response;
-            let accessToken;
+            let accessToken, expires;
+            console.log(parsed);
 
             if (Array.isArray(parsed?.Data)) { // For multiTab dashboard
                 for (const item of parsed.Data) {
                     if (item.access_token) {
                         accessToken = item.access_token;
-                        isMultiTab = true
+                        isMultiTab = true;
+                        expires = item.expires;
                         break;
                     }
                 }
             } 
             else{
                 accessToken = parsed.Data.access_token;
+                expires = parsed.Data[".expires"];
             }
 
             if (accessToken) {
                 token = accessToken;
+                tokenExpiry = new Date(expires);
                 renderDashboard(dashboardId);
             } else {
                 alert("Access token not found in response.");
@@ -112,6 +117,12 @@ function getDashboardAccessToken(dashboardId, mode, expirationTime) {
 }
 
 function renderDashboard(dashboardId) {
+  const now = new Date();
+
+  if (!token || isTokenExpired()) {
+    console.log("Token expired or missing. Fetching new token...");
+    getDashboardAccessToken(dashboardId, 'view', '100000');
+  }
     this.dashboard = BoldBI.create({
         serverUrl: rootUrl + "/" + siteIdentifier,
         dashboardId: dashboardId,
@@ -122,6 +133,10 @@ function renderDashboard(dashboardId) {
 
     this.dashboard.loadDashboard();
 };
+function isTokenExpired() {
+  if (!tokenExpiry) return true; // No expiry means treat as expired
+  return new Date() >= new Date(tokenExpiry);
+}
 
 function embedConfigErrorDialog() {
     var targetContainer = $('<div id="custom_dialog"></div>');
