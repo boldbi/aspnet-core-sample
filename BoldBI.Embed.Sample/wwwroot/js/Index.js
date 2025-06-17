@@ -131,7 +131,7 @@ function renderDashboard(dashboardId) {
     this.dashboard.loadDashboard();
 };
 function isTokenExpired() {
-  if (!tokenExpiry) return true; // No expiry means treat as expired
+  if (!tokenExpiry) return true;
   return new Date() >= new Date(tokenExpiry);
 }
 
