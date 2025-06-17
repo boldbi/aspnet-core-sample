@@ -37,15 +37,12 @@ function ListDashboards(data) {
     }
 }
 
-// 1. Generate UUID
-function generateUUID() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-    const r = Math.random() * 16 | 0;
-    const v = c === 'x' ? r : (r & 0x3 | 0x8);
-    return v.toString(16);
-  });
+// 1. Main function to call
+function getDashboardAccessToken(dashboardId, mode, expirationTime) {
+  const queryString = generateEmbedQueryString(dashboardId, mode, expirationTime);
+  const payload = buildRequestPayload(queryString);
+  sendAuthorizationRequest(payload, dashboardId);
 }
-
 // 2. Build embed query string
 function generateEmbedQueryString(dashboardId, mode, expirationTime) {
   return [
@@ -57,7 +54,16 @@ function generateEmbedQueryString(dashboardId, mode, expirationTime) {
   ].join('&');
 }
 
-// 3. Build request payload
+// 3. Generate UUID
+function generateUUID() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+    const r = Math.random() * 16 | 0;
+    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
+
+// 4. Build request payload
 function buildRequestPayload(queryString) {
   return {
     embedQuerString: queryString,
@@ -102,13 +108,6 @@ function sendAuthorizationRequest(payload, dashboardId) {
         }
         },
   });
-}
-
-// 5. Main function to call
-function getDashboardAccessToken(dashboardId, mode, expirationTime) {
-  const queryString = generateEmbedQueryString(dashboardId, mode, expirationTime);
-  const payload = buildRequestPayload(queryString);
-  sendAuthorizationRequest(payload, dashboardId);
 }
 
 function renderDashboard(dashboardId) {
