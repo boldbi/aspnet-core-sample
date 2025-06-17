@@ -116,8 +116,6 @@ function sendAuthorizationRequest(payload, dashboardId) {
 }
 
 function renderDashboard(dashboardId) {
-  const now = new Date();
-
   if (!token || isTokenExpired()) {
     console.log("Token expired or missing. Fetching new token...");
     getDashboardAccessToken(dashboardId, 'view', '100000');
