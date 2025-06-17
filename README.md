@@ -1,6 +1,6 @@
 # Bold BI Embedded Sample in .NET Core
 
-This project was created using ASP.NET Core 8.0. This application aims to demonstrate how to render the dashboard available on your Bold BI server.
+This project demonstrates how to embed a Bold BI dashboard in an ASP.NET Core 8.0 application using embed token authentication. The sample shows how to securely render and list dashboards with minimal API usage, while supporting row-level security, group-based authorization, and anonymous user embedding using embed token authentication.
 
 ## Dashboard view
 
@@ -56,16 +56,25 @@ This project was created using ASP.NET Core 8.0. This application aims to demons
 Please refer to the [help documentation](https://help.boldbi.com/embedding-options/embedding-sdk/samples/asp-net-core/#how-to-run-the-sample?utm_source=github&utm_medium=backlinks) to know how to run the sample.
 
 ## How the sample works
- 1. We call the getDashboards API to retrieve the list of available dashboards.
+ 1. Based on the values provided in the embedConfig.json file, the application obtains a user token and validates it. Then, it retrieves the list of available dashboards from the Bold BI server using a Rest API call.
 
- 2. We then call the getDashboardAccessToken method to fetch the access token for a specific dashboard.
+ 2. In HomeController.cs, the GetDashboards() action uses the GetToken method to authenticate and fetch the dashboard list, which is used to dynamically populate the DOM in Index.html.
  
- 3. In the getDashboardAccessToken method, we manually build the embed query and call the Embed Authorization API to authenticate and retrieve the access token using an AJAX call.
+ 3. After receiving the dashboard list, an embed query string is manually generated using the first dashboard ID, access mode, and expiration time.
+    
+ 4. This query is sent to the embed authorization API, which returns a valid access token with its expiration time.
  
- 4. We store the access token in the embedToken variable and use it to render the dashboard.
- 
- 5. When navigating from one dashboard to another, the authorization server API is not called again. The same embedToken is reused. If the user does not have permission to view a particular dashboard, an "Unauthorized" error will be displayed.
- > Note: We have provided this support for dashboard and dashboard designer.
+ 5. During this API call, you can apply row-level security, group-based authorization, and anonymous user to generate the token.
+    
+ 6. The returned access token is stored globally and reused for rendering dashboards.
+    
+ 7. The renderDashboard() method uses this token with the Bold BI JavaScript SDK (embedToken property).
+     
+ 8. Rather than generating a new token for each dashboard load, the application reuses the same token to support:
+    * Row-level security (RLS)
+    * Group-based authorization
+    * Anonymous user access
+
 
 ## Important notes
 
