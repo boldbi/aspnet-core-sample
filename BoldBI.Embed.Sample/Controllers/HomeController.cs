@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using BoldBI.Embed.Sample.Models;
 using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using System.IO;
+using System.Text;
 
 namespace BoldBI.Embed.Sample.Controllers
 {
@@ -86,45 +86,32 @@ namespace BoldBI.Embed.Sample.Controllers
         }
 
         [HttpPost]
-        [Route("AuthorizationServer")]
-        public string AuthorizationServer([FromBody] object embedQuerString)
+        [Route("TokenGeneration")]
+        public string TokenGeneration()
         {
-            var embedClass = Newtonsoft.Json.JsonConvert.DeserializeObject<EmbedClass>(embedQuerString.ToString());
-
-            var embedQuery = embedClass.embedQuerString;
-            // User your user-email as embed_user_email
-            embedQuery += "&embed_user_email=" + GlobalAppSettings.EmbedDetails.UserEmail;
-			//To set embed_server_timestamp to overcome the EmbedCodeValidation failing while different timezone using at client application.
-            double timeStamp = (int)DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
-            embedQuery += "&embed_server_timestamp=" + timeStamp;
-            var embedDetailsUrl = "/embed/authorize?" + embedQuery + "&embed_signature=" + GetSignatureUrl(embedQuery);
-
-            using (var client = new HttpClient())
+            var embedDetails = new
             {
-                client.BaseAddress = new Uri(embedClass.dashboardServerApiUrl);
-                client.DefaultRequestHeaders.Accept.Clear();
-
-                var result = client.GetAsync(embedClass.dashboardServerApiUrl + embedDetailsUrl).Result;
-                string resultContent = result.Content.ReadAsStringAsync().Result;
-                return resultContent;
-            }
-
-        }
-
-        public string GetSignatureUrl(string queryString)
-        {
-            if (queryString != null)
-            {
-                var encoding = new System.Text.UTF8Encoding();
-                var keyBytes = encoding.GetBytes(GlobalAppSettings.EmbedDetails.EmbedSecret);
-                var messageBytes = encoding.GetBytes(queryString);
-                using (var hmacsha1 = new HMACSHA256(keyBytes))
+                email = GlobalAppSettings.EmbedDetails.UserEmail,
+                serverurl = GlobalAppSettings.EmbedDetails.ServerUrl,
+                siteidentifier = GlobalAppSettings.EmbedDetails.SiteIdentifier,
+                embedsecret = GlobalAppSettings.EmbedDetails.EmbedSecret,
+                dashboard = new  // Dashboard ID property is mandatory only when using BoldBI version 14.1.11.
                 {
-                    var hashMessage = hmacsha1.ComputeHash(messageBytes);
-                    return Convert.ToBase64String(hashMessage);
+                    id = GlobalAppSettings.EmbedDetails.DashboardId
                 }
-            }
-            return string.Empty;
+            };
+
+            //Post call to Bold BI server
+            var client = new HttpClient();
+            var requestUrl = $"{embedDetails.serverurl}/api/{embedDetails.siteidentifier}/embed/authorize";
+
+            var jsonPayload = JsonConvert.SerializeObject(embedDetails);
+            var httpContent = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
+
+            var result = client.PostAsync(requestUrl, httpContent).Result;
+            var resultContent = result.Content.ReadAsStringAsync().Result;
+
+            return JsonConvert.DeserializeObject<dynamic>(resultContent).Data.access_token;
         }
     }
 }

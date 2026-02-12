@@ -14,9 +14,7 @@
         var rootUrl = "@ViewBag.ServerUrl";
         var dashboardId = "@ViewBag.DashboardId";
         var siteIdentifier = "@ViewBag.SiteIdentifier";
-        var environment = "@ViewBag.Environment";
-        var embedType = "@ViewBag.EmbedType";
-        var authorizationServerUrl = "@Url.Action("AuthorizationServer", "Home")";
+        var tokenGenerationUrl = "@Url.Action("TokenGeneration", "Home")";
         var getDashboardsUrl = "@Url.Action("GetDashboards", "Home")";
     </script>
 </head>
@@ -24,7 +22,7 @@
 <body onload="Init()">
     <div id="container">
         <div class="header-section">
-            <div id="grid-title">All Dashboard</div>
+            <div id="grid-title">All Dashboards</div>
         </div>
         <div id="panel">
         </div>
