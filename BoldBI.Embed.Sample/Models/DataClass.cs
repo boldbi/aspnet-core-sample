@@ -1,30 +1,7 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Threading.Tasks;
 
 namespace BoldBI.Embed.Sample.Models
 {
-    [DataContract]
-    public class EmbedClass
-    {
-        [DataMember]
-        public string embedQuerString { get; set; }
-        [DataMember]
-        public string dashboardServerApiUrl { get; set; }
-    }
-
-    public class TokenObject
-    {
-        public string Message { get; set; }
-
-        public string Status { get; set; }
-
-        public string Token { get; set; }
-    }
-
     public class Token
     {
         [JsonProperty("access_token")]
