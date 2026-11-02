@@ -54,7 +54,13 @@ function renderDashboard(dashboardId) {
                 serverUrl: rootUrl + "/" + siteIdentifier,
                 dashboardId: dashboardId,
                 embedContainerId: "dashboard",
-                embedToken: accessToken
+                embedToken: accessToken,
+                settings: {
+                    viewer: {
+                        showLoadingLogo: false
+                        comment: true
+                    }
+                }
             });
 
             dashboard.loadDashboard();
