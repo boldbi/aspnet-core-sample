@@ -56,9 +56,11 @@ function renderDashboard(dashboardId) {
                 embedContainerId: "dashboard",
                 embedToken: accessToken,
                 settings: {
-                    viewer: {
-                        showLoadingLogo: false
-                        comment: true
+                    // viewer: {
+                    //     showLoadingLogo: false
+                    // },
+                     dashboardExperience: {
+                        enableSkeletonLoading: false
                     }
                 }
             });
